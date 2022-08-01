@@ -1,0 +1,18 @@
+import requests
+import json
+
+URL = 'http://127.0.0.1:8000/'
+
+data = {
+    'name':'pratik',
+    'roll':1001,
+    'city':'keshod'
+}
+
+json_data = json.dumps(data)
+
+r = requests.post(url=URL, data=json_data)
+
+data = r.json()
+
+print(data)
